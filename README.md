@@ -2,6 +2,27 @@
 
 This repository provides a dataloader for the SimVS inconsistent lighting dataset, designed to help researchers experiment on 3D generation from sparse and inconsistent images.
 
+## Scene Previews
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center"><b>Bear</b></td>
+      <td align="center"><b>Boop</b></td>
+      <td align="center"><b>Chair</b></td>
+      <td align="center"><b>Chess</b></td>
+      <td align="center"><b>Statue</b></td>
+    </tr>
+    <tr>
+      <td align="center"><img src="scene_gifs/bear.gif" width="160"/></td>
+      <td align="center"><img src="scene_gifs/boop.gif" width="160"/></td>
+      <td align="center"><img src="scene_gifs/chair.gif" width="160"/></td>
+      <td align="center"><img src="scene_gifs/chess.gif" width="160"/></td>
+      <td align="center"><img src="scene_gifs/statue.gif" width="160"/></td>
+    </tr>
+  </table>
+</div>
+
 ## SimVS Paper
 
 This dataset is part of the research presented in:
