@@ -1,8 +1,24 @@
 # SimVS Lighting Dataset Loader
 
-This code is still in an experimental state.
+This repository provides a dataloader for the SimVS inconsistent lighting dataset, designed to help researchers experiment on 3D generation from sparse and inconsistent images.
 
-This repository provides a dataloader for the SimVS inconsistent lighting dataset, designed to help researchers experiment on 3D generation from sparse and inconsistent images. 
+## SimVS Paper
+
+This dataset is part of the research presented in:
+
+**SimVS: Simulating World Inconsistencies for Robust View Synthesis**
+
+[Project Page](https://alextrevithick.com/simvs/) | CVPR 2025
+
+SimVS addresses the challenge of real-world 3D reconstruction where scenes often contain inconsistencies - objects move, and lighting changes over time. The method uses generative augmentation to simulate inconsistencies and trains a generative model to produce consistent multiview images from sparse, inconsistent inputs. This dataset specifically focuses on scenes with varying illumination conditions.
+
+## Installation
+
+Install the required dependencies using pip:
+
+```bash
+pip install -r requirements.txt
+```
 
 ## Dataset
 
@@ -43,6 +59,8 @@ The `--load-features` flag is required to actually load the image data rather th
 
 This script utilizes functions from the `dataloader_helpers` directory to parse Colmap outputs and load image data.
 
+This dataset is compatible with the original [WildGaussians](https://github.com/jkulhanek/wild-gaussians) training code, allowing you to seamlessly integrate it into the original framework for experiments with inconsistent lighting conditions.
+
 ## Implementation Details
 
 This dataloader is a minimal adaptation from the wonderful WildGaussians repository:
@@ -53,3 +71,15 @@ Please refer to the original repository for the full WildGaussians method, inclu
 **Authors of the original work:** Jonas Kulhanek, Songyou Peng, Zuzana Kukelova, Marc Pollefeys, Torsten Sattler
 
 **Paper:** [WildGaussians: 3D Gaussian Splatting in the Wild (NeurIPS 2024)](https://arxiv.org/pdf/2407.08447)
+
+## Citation
+
+If you use this dataset in your research, please cite:
+
+```
+@article{trevithick2024simvs,
+  title={SimVS: Simulating World Inconsistencies for Robust View Synthesis},
+  author={Alex Trevithick and Roni Paiss and Philipp Henzler and Dor Verbin and Rundi Wu and Hadi Alzayer and Ruiqi Gao and Ben Poole and Jonathan T. Barron and Aleksander Holynski and Ravi Ramamoorthi and Pratul P. Srinivasan},
+  journal={arXiv},
+  year={2024}
+}
