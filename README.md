@@ -56,6 +56,26 @@ This dataset was created specifically to address the lack of existing datasets w
 
 Note that some scenes in the dataset are not distortion-corrected.
 
+### Dataset Structure
+
+Each scene in the dataset follows the same directory structure:
+
+```
+scene_name/
+├── images/         # All images from all lighting conditions
+├── sparse/         # 3D reconstruction information extracted by COLMAP
+├── train_list.txt  # List of image filenames to use for training
+└── test_list.txt   # List of image filenames to use for testing
+```
+
+Key components:
+- `images/`: Contains all captured images across different lighting conditions
+- `sparse/`: Contains the COLMAP reconstruction data including camera parameters, points, and image registrations
+- `train_list.txt`: Text file listing the filenames of images designated for training
+- `test_list.txt`: Text file listing the filenames of images designated for testing/evaluation
+
+The dataloader uses these files to identify which images belong to which split and to load the appropriate camera parameters and image data.
+
 ### Intended Use
 
 The dataset is designed for evaluating novel-view synthesis methods under inconsistent lighting. The typical experimental setup involves:
